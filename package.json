@@ -1,0 +1,31 @@
+{
+  "name": "streamlet-bundle-size-benchmark",
+  "version": "0.0.0",
+  "description": "A benchmark for bundle size of streamlets",
+  "scripts": {
+    "start": "node benchmark/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loreanvictor/streamlet-bundle-size-benchmark.git"
+  },
+  "author": "Eugene Ghanizadeh Khoub <ghanizadeh.eugene@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loreanvictor/streamlet-bundle-size-benchmark/issues"
+  },
+  "homepage": "https://github.com/loreanvictor/streamlet-bundle-size-benchmark#readme",
+  "dependencies": {
+    "@parcel/compressor-brotli": "^2.0.0",
+    "@parcel/compressor-gzip": "^2.0.0",
+    "@parcel/config-default": "^2.0.0",
+    "@parcel/core": "^2.0.0",
+    "@parcel/fs": "^2.0.0",
+    "callbag-common": "^0.1.8",
+    "callbag-subject": "^2.1.0",
+    "parcel": "^2.0.0",
+    "rxjs": "^7.4.0",
+    "streamlets": "^0.2.2"
+  }
+}

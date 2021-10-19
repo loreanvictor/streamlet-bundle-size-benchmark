@@ -80,7 +80,8 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/*
+!dist/PLACEHOLDER
 
 # Gatsby files
 .cache/
@@ -102,3 +103,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Parcel Cache
+.parcel-cache
