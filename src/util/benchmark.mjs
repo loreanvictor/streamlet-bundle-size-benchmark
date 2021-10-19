@@ -13,10 +13,12 @@ export async function benchmark(name, libs) {
   const results = []
 
   for (const [lib, mod] of suites) {
-    const result = await (typeof mod === 'string' ? sampleMod(mod) : sampleFn(lib, ...mod))
-    results.push([lib, result.size, result.gzipped])
+    const res = await (typeof mod === 'string' ? sampleMod(mod) : sampleFn(lib, ...mod))
+    results.push([lib, res.size, res.gzipped])
 
-    console.log(chalk`  {green ✔} ${lib}`)
+    console.log(chalk`  {green ✔} ${lib}`
+      + chalk` {gray ${Array(32 - lib.length).join('.')} ${res.time}ms}`
+    )
   }
 
   console.log()

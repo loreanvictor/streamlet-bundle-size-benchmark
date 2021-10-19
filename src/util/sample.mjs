@@ -14,7 +14,7 @@ export async function sample(content) {
       mode: 'production'
     })
 
-    const {bundleGraph, changedAssets} = await bundler.run()
+    const {bundleGraph, buildTime} = await bundler.run()
     let size = 0
     let gzipped = 0
 
@@ -25,7 +25,7 @@ export async function sample(content) {
       }
     }
 
-    return { size, gzipped }
+    return { size, gzipped, time: buildTime }
   } catch (err) {
     console.error(err)
   }
