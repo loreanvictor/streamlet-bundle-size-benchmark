@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "A benchmark for bundle size of streamlets",
   "scripts": {
-    "start": "node benchmark/index.mjs",
+    "start": "node src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,15 +17,18 @@
   },
   "homepage": "https://github.com/loreanvictor/streamlet-bundle-size-benchmark#readme",
   "dependencies": {
-    "@parcel/compressor-brotli": "^2.0.0",
     "@parcel/compressor-gzip": "^2.0.0",
     "@parcel/config-default": "^2.0.0",
     "@parcel/core": "^2.0.0",
     "@parcel/fs": "^2.0.0",
+    "callbag-catch-error": "^1.0.1",
     "callbag-common": "^0.1.8",
+    "callbag-retry": "^1.0.0",
     "callbag-subject": "^2.1.0",
+    "chalk": "^4.1.2",
     "parcel": "^2.0.0",
     "rxjs": "^7.4.0",
-    "streamlets": "^0.2.2"
+    "streamlets": "^0.2.2",
+    "table": "^6.7.2"
   }
 }

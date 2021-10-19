@@ -1,6 +1,8 @@
 import { Parcel } from '@parcel/core'
 import { join } from 'path'
-import { writeFile, stat} from 'fs/promises'
+import { writeFile, stat, readFile } from 'fs/promises'
+
+import { normalize } from './path.mjs'
 
 
 export async function sample(content) {
@@ -28,6 +30,12 @@ export async function sample(content) {
     console.error(err)
   }
 }
+
+
+export async function sampleMod(path) {
+  return sample(await readFile(normalize(path), 'utf8'))
+}
+
 
 export async function sampleFn(lib, ...func) {
   return sample(`import { ${func.join(',')} } from "${lib}"; ${func.map(f => `console.log(${f})`).join(';')}`)
