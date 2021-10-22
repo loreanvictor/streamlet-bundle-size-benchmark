@@ -19,13 +19,13 @@
   "dependencies": {
     "@parcel/compressor-gzip": "^2.0.0",
     "@parcel/core": "^2.0.0",
-    "callbag-catch-error": "^1.0.1",
-    "callbag-common": "^0.1.8",
-    "callbag-retry": "^1.0.0",
+    "callbag-catch-error": "latest",
+    "callbag-common": "latest",
+    "callbag-retry": "latest",
     "chalk": "^4.1.2",
     "parcel": "^2.0.0",
-    "rxjs": "^7.4.0",
-    "streamlets": "^0.2.2",
+    "rxjs": "latest",
+    "streamlets": "latest",
     "table": "^6.7.2"
   }
 }
